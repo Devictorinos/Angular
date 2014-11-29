@@ -1,0 +1,20 @@
+<html ng-app="notesApp">
+<head><title>Notes App</title></head>
+<body ng-controller="MainCtrl as ctrl">
+<div ng-repeat="note in ctrl.notes">
+    <div>First Element: {{$first}}</div>
+    <div>Middle Element: {{$middle}}</div>
+    <div>Last Element: {{$last}}</div>
+    <div>Index of Element: {{$index}}</div>
+    <div>At Even Position: {{$even}}</div>
+    <div>At Odd Position: {{$odd}}</div>
+    <span class="label"> {{note.label}}</span>
+    <span class="status" ng-bind="note.done"></span>
+    <br/><br/>
+</div>
+<script
+src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js">
+</script>
+
+</body>
+</html

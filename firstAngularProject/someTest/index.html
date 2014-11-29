@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TestApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<div style="text-align:center; width: 500px;
+height:150px; line-height:150px;margin: 100px auto;" ng-controller="TestController">
+ 
+    
+    <p style="font-size: 25px;" class="bg-success">{{ clock | date:'dd/M/yyyy H:mm:ss' }}</p>
+</div>
+<div style="clear: both;"></div>
+ <div style="margin: 0 auto; width: 500px;height: 300px;" ng-controller="FormController">
+        <div ng-controller="FormController">
+
+  <!--           <p>{{pablisher.person}}</p>
+  <p ng-repeat="publisher in pablisher.person">
+      
+      {{publisher.name}}
+  
+  </p> -->
+             <blockquote ng-repeat="publisher in pablisher.person" >
+                  <p>{{publisher.name}}</p>
+                  <p>{{publisher.lname}}</p>
+                  <p ng-show="publisher.date">{{publish.date | date:'dd/M/yyyy H:mm:ss'}}</p>
+            </blockquote> 
+        
+        <blockquote ng-show="pub">
+
+            <p>{{pub.name}}</p>
+            <p>{{pub.lname}}</p>
+            
+        </blockquote>
+        <form role="form" novalidate>
+          <div class="form-group">
+            <label for="exampleInputEmail1">First Name</label>
+            <input  ng-model="pub.name" type="text" class="form-control" id="exampleInputEmail1">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Last Name</label>
+            <input ng-model="pub.lname" type="text" class="form-control" id="exampleInputPassword1" >
+          </div>
+          
+          <button ng-click="addPubcisher(pub)" type="submit" class="btn btn-default">Submit</button>
+        </form>
+     </div>
+    </div>
+</body>
+</html>

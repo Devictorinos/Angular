@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>chat.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{256, 256}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{256, 256}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+		<key>edit_delete.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{128, 256}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{128, 256}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+		<key>homework.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{0, 256}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 256}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+		<key>pen.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{256, 128}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{256, 128}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+		<key>pen_blue.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{256, 0}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{256, 0}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+		<key>pen_red.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{128, 128}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{128, 128}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+		<key>pencil.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{0, 128}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 128}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+		<key>rename_edit.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{128, 0}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{128, 0}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+		<key>standby.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{0, 0}, {128, 128}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {128, 128}}</string>
+			<key>sourceSize</key>
+			<string>{128, 128}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>hash</key>
+		<string>d1740e6dbf</string>
+		<key>name</key>
+		<string>img</string>
+		<key>realTextureFileName</key>
+		<string>img.png</string>
+		<key>size</key>
+		<string>{384, 384}</string>
+		<key>textureFileName</key>
+		<string>img.png</string>
+		<key>version</key>
+		<string>0.9.4</string>
+	</dict>
+</dict>
+</plist>

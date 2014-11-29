@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.js"></script>
+        <style>
+        .ng-invalid.ng-dirty {
+            border: 2px solid #fa787e;
+        }
+
+        .ng-valid.ng-dirty {
+            border: 2px solid #78fa89;
+        }
+
+        .username.ng-dirty.ng-invalid-minlength {
+            background-color: lightpink;
+        }
+
+        form {
+            border: none !important;
+        }
+
+    </style>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+
+<form name="testForm" ng-submit="testForm.$valid && ctrl.submit()" novalidate>
+    <input type="text" ng-model="ctrl.user.username" required />
+    <input type="password" ng-model="ctrl.user.password" />
+    <input type="submit" value="Submit">
+</form>
+
+  <span ng-show="testForm.$valid === true">you can send</span>
+  <spanng-show="testForm.$valid === false">there are required fields</span><br />
+
+<script type="text/javascript">
+    
+    angular.module('notesApp', [])
+    .controller('MainCtrl', [function() {
+        var self = this;
+        self.submit = function() {
+            console.log('User clicked submit with ', self.user);
+        };
+    }]);
+</script>
+</body>
+</html>

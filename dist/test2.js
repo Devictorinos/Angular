@@ -1,0 +1,1 @@
+var vik=function(){console.log("vbee")};

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.js"></script>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+
+ <input type="text" ng-model="ctrl.username">
+ <input type="password" ng-model="ctrl.password">
+  <button ng-click="ctrl.change()">Change Values</button>
+  <button ng-click="ctrl.submit()">Submit</button><br />
+
+<script type="text/javascript">
+    
+    angular.module('notesApp', [])
+    .controller('MainCtrl', [function(){
+        var self = this;
+        self.change = function() {
+            self.username = "changed";
+            self.password = "password";
+        };
+
+        self.submit = function() {
+            console.log("user submited with", self.username, self.password);
+        };
+    }]);
+</script>
+</body>
+</html>

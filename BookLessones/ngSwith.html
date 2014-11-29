@@ -1,0 +1,64 @@
+
+<html ng-app="notesApp">
+<head>
+    <title>Notes App</title>
+    <style>
+   
+    </style>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+
+<form ng-submit="ctrl.submit()" name="myForm">
+        
+    
+        <div ng-repeat="field in ctrl.formFields">
+   
+            <div ng-switch on="field.type">
+                <input type="text" ng-switch-when="input">
+                  <select ng-init="" ng-switch-when="select" ng-model="ctrl.[field.model]" data-ng-options="f.num for f in field.options">
+                 
+                   
+                   </select>
+                   {{field.options}}
+            <input type="checkbox" ng-switch-when="checkbox">
+            </div>
+        </div>
+      
+    
+
+
+</form>
+
+<script src="../bower_components/angular/angular.js"></script>
+<script type="text/javascript">
+    angular.module('notesApp', []).controller('MainCtrl', [function() {
+    var self= this;
+       self.formFields = [
+       {
+        type: 'select',
+        model: 'FromDate',
+        options: [
+            {num: 1},
+            {num: 2},
+            {num: 3},
+            {num: 4},
+            {num: 5},
+            {num: 6},
+            {num: 7},
+
+        ]
+       },
+            {
+        type: 'input',
+        model: '',
+       },
+       {
+        type: 'checkbox'
+       }
+       ];
+
+       console.log(self.formFields)
+    }]);
+</script>
+</body>
+</html>

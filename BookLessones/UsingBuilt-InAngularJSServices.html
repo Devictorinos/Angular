@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.js"></script>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+    
+    <h1>Log Stuff</h1>
+    <button ng-click="logStuff()">click</button>
+
+<script type="text/javascript">
+    
+    angular.module('notesApp', [])
+    .controller('MainCtrl', ['$scope', '$log', '$location', function($scope, $log, $location){
+        $scope.url = 'congo';
+       $scope.logStuff = function() {
+            $log.log('The Button was pressed');
+            $log.log($location.absUrl());
+            $log.log($location.path("/new"));
+            $log.log($location.search("test", "abc"));
+            //$log.log($location.url($scope.url));
+       }
+    }]);
+</script>
+</body>
+</html>
+  

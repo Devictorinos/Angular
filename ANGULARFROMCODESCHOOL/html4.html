@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='store'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Document</title>
+    <script src='bower_components/angular/angular.js'></script>
+    <script src='app/app2.js'></script>
+    <script src='app/apDirectivers.js'></script>
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap-theme.css' />
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap-theme.css.map' />
+    <style>
+        .ng-invalid.ng-dirty {
+            border: 2px solid #fa787e;
+        }
+
+        .ng-valid.ng-dirty {
+            border: 2px solid #78fa89;
+        }
+
+        form {
+            border: none !important;
+        }
+
+    </style>
+</head>
+<body ng-controller='StoreController as store' style='padding: 50px;'>
+    <section  >   
+
+        <div ng-repeat="product in store.products | limitTo:7 | orderBy: '-price'">
+        <div ng-hide='product.soldOut'>
+            <product-title></product-title>
+
+            <h2> Product Price - {{product.price | currency}}</h2>
+            <!-- images controller -->
+           <!--  <div  ng-controller='GalleryController as gallery' >
+                   <img ng-src='{{product.images[gallery.current]}}' alt=''>
+            </div> -->
+            <product-image ng-model='gallery'> 
+            </product-image>
+           <product-panels ng-init='tab = 1' ng-model='panel'></product-panels>
+       
+            <button ng-show='product.canPurchase' > Add to Card </button>
+
+        </div>
+    </div>
+    </section>
+
+
+</body>
+</html>

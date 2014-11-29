@@ -1,0 +1,19 @@
+div#container {
+  width: 1024px;
+  height: 800px;
+  border: 1px solid #000;
+  margin: 50px auto;
+}
+div#container div.rightBox {
+  float: right;
+  width: 500px;
+  height: 800px;
+  border: 1px solid #000;
+}
+div#container div.leftBox {
+  padding: 10px;
+  float: left;
+  width: 500px;
+  height: 800px;
+  border: 1px solid #000;
+}

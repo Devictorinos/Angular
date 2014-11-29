@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app/app.js"></script>
+</head>
+<body ng-controller="StoreController as store">
+    <div ng-repeat="product in store.products | limitTo:7 | orderBy: '-price'">
+        <div ng-hide="product.soldOut">
+            <h1> Product Name  - {{product.name}}</h1>
+            <h2> Product Price - {{product.price | currency}}</h2>
+            <div ng-repeat="image in product.images[0]">
+                    <img ng-src="{{image}}" alt="">
+                      
+            </div>
+
+            
+    
+            <p> Product Description - {{product.description | limitTo:100}}</p>
+            <button ng-show="product.canPurchase" > Add to Card </button>
+
+        </div>
+    </div>
+</body>
+</html>

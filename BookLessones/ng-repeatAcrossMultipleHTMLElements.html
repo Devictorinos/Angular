@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.js"></script>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+    <table>
+        <tr ng-repeat-start="note in ctrl.notes">
+            <td>{{note.label}}</td>
+            <td>{{note.done}}</td>
+        </tr>
+        
+        <tr ng-repeat-end>
+            <td>Done: {{note.bebe}}</td>
+        </tr>
+    </table>
+    
+ 
+
+   
+<script type="text/javascript">
+angular.module('notesApp', [])
+.controller('MainCtrl', [function() {
+    var self = this;
+    self.notes = [
+        {id: 1, label: 'First Note', done: false, bebe: true},
+        {id: 2, label: 'Second Note', done: false, bebe: false},
+        {id: 3, label: 'Finished Third Note', done: true, bebe: true}
+    ];
+}]);
+</script>
+</body>
+</html>

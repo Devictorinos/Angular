@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <link rel="stylesheet" href="bower_components/pikaday/css/pikaday.css">
+    <!-- <script src="bower_components/moment/moment.js"></script> -->
+     <script src="bower_components/moment/min/moment-with-locales.min.js"></script> 
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="bower_components/pikaday/pikaday.js"></script>
+    <script src="bower_components/pikaday-angular/pikaday-angular.js"></script>
+   
+   
+</head>
+<body ng-controller="MainCtrl as ctrl">
+
+<form name="testForm" ng-submit="ctrl.submit()" novalidate>
+    <input pikaday="myPickerObject" ng-model="ctrl.user.fromD" />
+    <input pikaday="myPickerObject" ng-model="ctrl.user.toD" />
+    <input type="submit" value="Submit">
+</form>
+
+<input pikaday="myPickerObject" ng-model="mdate">
+<span> Date = {{  ctrl.user.fromD }}</span>
+<span> Date = {{  ctrl.user.toD }}</span>
+  
+<script type="text/javascript">
+    
+    angular.module('notesApp', ['angularPikaday']).controller('MainCtrl', [function(){
+    
+          var self = this;
+        self.submit = function() {
+            console.log('User clicked submit with ', self.user);
+        };
+    }]);
+</script>
+</body>
+</html>

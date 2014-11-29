@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.js"></script>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+
+<div>
+     <select name="" id="" ng-model="ctrl.selectedCountryId"
+        ng-options="c.id as c.label for c in ctrl.countries"
+    ></select> 
+    SELECTED COUNTRY ID : {{ctrl.selectedCountryId}}
+</div>
+
+<div>
+    <select ng-model="ctrl.selectedCountry"
+        ng-options="c.label for c in ctrl.countries ">
+    </select>
+    Selected Country : {{ctrl.selectedCountry}}
+</div>
+
+<script type="text/javascript">
+angular.module('notesApp', [])
+.controller('MainCtrl', [function() {
+    this.countries = [
+        {label: 'USA', id: 1},
+        {label: 'India', id: 2},
+        {label: 'Other', id: 3}
+    ];
+    this.selectedCountryId = 1;
+     this.selectedCountry = this.countries[0];
+}]);
+</script>
+</body>
+</html>

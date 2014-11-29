@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.js"></script>
+</head>
+<body >
+    <div ng-controller="MainCtrl as ctrl">
+        
+
+        <h1>
+            {{ ctrl.message}} AngularJS     
+        </h1>
+    <button ng-click="ctrl.sayGoodBye()">Say GoodBye</button>
+    </div>
+    
+ 
+
+   
+<script type="text/javascript">
+    
+    angular.module('notesApp', [])
+    .controller('MainCtrl', [function(){
+        var self  = this;
+        self.message = "Hello";
+        
+
+        self.sayGoodBye = function () {
+            self.message = "GoodBye";
+            
+        };
+    }]);
+</script>
+</body>
+</html>

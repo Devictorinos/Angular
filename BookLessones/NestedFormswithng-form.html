@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.js"></script>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+
+<form name="myForm" novalidate ng-submit="myForm.profile.$valid && ctrl.submit()">
+  <input type="text" class="username" name="uname" ng-model="ctrl.user.name" placeholder="user name" required="">
+  <input type="text" class="password" name="pwd" placeholder="password" ng-model="ctrl.user.password" required="">
+  <input type="checkbox" ng-model="ctrl.user.agree" ng-true-value="YES" ng-false-value="NO">
+  <br />
+
+  <ng-form name="profile">
+    <input type="text" name="firstName" ng-model="ctrl.user.profile.firstName" placeholder="first name" required><br />
+    <input type="text" name="middleName" ng-model="ctrl.user.profile.middleName" placeholder="middle name" required><br />
+    <input type="date" name="dob" ng-model="ctrl.user.profile.dob" ><br />
+
+  </ng-form>
+
+  <span ng-show="myForm.profile.$invalid">
+      Please fill out profile information
+  </span>
+
+  <input type="submit" name="submit" value="send">
+</form>
+
+<script type="text/javascript">
+    
+    angular.module('notesApp', [])
+    .controller('MainCtrl', [function() {
+        var self = this;
+        self.submit = function() {
+            console.log('User clicked submit with ', self.user);
+            console.log('User clicked submit with ', self.user.profile);
+        };
+    }]);
+</script>
+</body>
+</html>

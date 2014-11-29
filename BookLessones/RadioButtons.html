@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.js"></script>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+
+    {{user.gender}}
+
+    <div ng-init="otherGender = 'other'">
+        <input type="radio"
+        name="gender"
+        ng-model="user.gender"
+        value="male">Male
+        <input type="radio"
+        name="gender"
+        ng-model="user.gender"
+        value="female">Female
+        <input type="radio"
+        name="gender"
+        ng-model="user.gender"
+        ng-value="otherGender">{{otherGender}}
+    </div>
+
+<script type="text/javascript">
+    
+    angular.module('notesApp', [])
+    .controller('MainCtrl', [function(){
+        var self  = this;
+
+        self.sports = [
+            {             
+                label: 'Football',
+                selected: 'YES'
+            },
+            {
+               
+                label: 'BasketBall',
+                 selected: 'NO'
+            },
+            {
+                label: 'Soccer',
+                 selected: 'YES'
+            },
+                        {
+                label: 'Swimming',
+                selected: 'NO'
+            }
+        ];
+    }]);
+</script>
+</body>
+</html>

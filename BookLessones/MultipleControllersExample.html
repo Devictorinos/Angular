@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body ng-controller="MainCtrl">
+    
+    <h1>Hello Controllers</h1>
+
+    <button ng-click="open('first')">Open First</button><br />
+    <button ng-click="open('second')">Open Second</button><br />
+    <div ng-switch on="tab">
+        <div ng-switch-when="first">
+            
+            <div ng-controller="SubCtrl as c">
+                --- {{c.list}}
+                --- {{list}}
+                <h3>First Tab</h3>
+                 <ul>
+                     <li ng-repeat="part in list">
+                     <span ng-bind="part.label"></span>
+                     </li>
+                     <button ng-click="add()">Add More Items</button>
+                 </ul>
+            </div>
+        </div>
+        <div ng-switch-when="second">
+            <div ng-controller="SubCtrl as ctrl">
+                <h3>Second tab</h3>
+                <ul>
+                    <li ng-repeat="item in list">
+                        <span ng-bind="item.label"></span>
+                    </li>
+                </ul>
+                <button ng-click="add()">Add More Items</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../bower_components/angular/angular.js"></script>
+<script type="text/javascript">
+    
+    angular.module('notesApp', [])
+    .controller('MainCtrl', ['$scope', function($scope){
+
+        $scope.tab = 'first';
+        $scope.open = function (tab) {
+           
+            $scope.tab = tab;
+        };
+
+        $scope.list = [
+            {id:1, label: 'item 0'},
+            {id:2, label: 'item 1'}
+        ];
+
+    }])
+    .controller('SubCtrl', ['$scope', function($scope){
+ 
+        $scope.add = function() {
+            $scope.list.push(
+            {
+                id: $scope.list.length+1,
+                label: 'item' + $scope.list.length
+            });
+            
+        };
+    }]);
+    
+</script>
+</body>
+</html>
+  
