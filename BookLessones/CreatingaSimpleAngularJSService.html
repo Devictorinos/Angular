@@ -16,24 +16,24 @@
         <div ng-controller="SubCtrl as ctrl">
             <h3>First Tab</h3>
             <ul>
-                <li ng-repeat="item in ctrl.list()">
+                <li ng-repeat="item in ctrl.list1()">
                     <span ng-bind="item.label"></span>
                 </li>
             </ul>
 
-            <button ng-click="ctrl.add()">Add more Items</button>
+            <button ng-click="ctrl.add1()">Add more Items</button>
         </div>
     </div>
      <div ng-switch-when="second">
         <div ng-controller="SubCtrl as ctrl">
             <h3>Second Tab</h3>
             <ul>
-                <li ng-repeat="item in ctrl.list()">
+                <li ng-repeat="item in ctrl.list2()">
                     <span ng-bind="item.label"></span>
                 </li>
             </ul>
 
-            <button ng-click="ctrl.add()">Add more Items</button>
+            <button ng-click="ctrl.add2()">Add more Items</button>
         </div>
     </div>
 
@@ -52,31 +52,53 @@ angular.module('notesApp', [])
 .controller('SubCtrl', ['ItemService', function(ItemService) {
 
     var self = this;
-
-    self.list = function() {
-        return ItemService.list();
+    self.list1 = function() {
+        return ItemService.list1();
     }
 
-    self.add = function() {
-        ItemService.add({
-            id: self.list().length +1,
-            label: 'Item' + self.list().length
+    self.list2 = function() {
+        return ItemService.list2();
+    }
+    self.add1 = function() {
+        ItemService.add1({
+            id: self.list1().length +1,
+            label: 'Item' + self.list1().length
+        });
+    }
+
+    self.add2 = function() {
+        ItemService.add2({
+            id: self.list2().length +1,
+            label: 'Item' + self.list2().length
         });
     }
     
 }])
 .factory('ItemService', function() {
-    var items = [
+    var items1 = [
             {id: 1, label: 'Item 0'},
             {id: 2, label: 'Item 1'}
         ];
+
+    var items2 = [
+            {id: 1, label: 'Item 0'},
+            {id: 2, label: 'Item 1'}
+        ];    
     return {
-        list: function() {
-            return items;
+        list1: function() {
+            return items1;
         },
 
-        add: function(item) {
-            items.push(item);
+        list2: function() {
+            return items2;
+        },
+
+        add1: function(item) {
+            items1.push(item);
+        },
+
+        add2: function(item) {
+            items2.push(item);
         }
     }
 });

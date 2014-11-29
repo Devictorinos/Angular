@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.js"></script>
+</head>
+<body ng-controller="mCtrl">
+    <button ng-click="changeTab('first')">Change to First</button>
+    <button ng-click="changeTab('second')">Change to Second</button>
+
+    <div ng-switch on ="tab">
+        <div ng-switch on="first">
+            <div ng-show="tab == 'first'">
+               {{tab}}
+                <div ng-controller="sCtrl">   
+                    <ul>
+                       <li ng-repeat="note in getNotes()">{{note.name}}</li> 
+                    </ul>
+                    <input type="text" ng-model="note">
+                    <button ng-click="add(note)">Add Note</button>
+                    <button ng-click="remove()">Remove Note</button>
+                </div>
+            </div>
+        </div>
+        <div ng-switch on="second" >
+            <div ng-controller="sCtrl">
+                <div ng-show="tab == 'second'">
+                    {{tab}}
+                      <ul>
+                       <li ng-repeat="note in getNotes()">{{note.name}}</li> 
+                    </ul>
+                    <input type="text" ng-model="note">
+                    <button ng-click="add(note)">Add Note</button>
+                    <button ng-click="remove()">Remove Note</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    angular.module('myApp',[])
+    .factory('AddRemoveNotes', [function(){
+        var notes = [
+            {name: 'First Note'},
+            {name: 'Second Note'},
+            {name: 'Third Note'}
+        ];
+
+        return {
+            notes: notes,
+            add: function (note) {
+                notes.push(note);
+            },
+            remove: function() {
+                notes.pop();
+            }
+
+        }
+
+        return notes;
+    }])
+    .controller('mCtrl', ['$scope', function($scope){
+        $scope.tab = 'first'
+
+        $scope.changeTab = function (tab) {
+            $scope.tab = tab;
+        }
+    }])
+    .controller('sCtrl', ['$scope', '$log', 'AddRemoveNotes',  function($scope, $log, AddRemoveNotes){
+       // $log.log(AddRemoveNotes);
+        $scope.getNotes = function () {
+           
+            return AddRemoveNotes.notes;
+        }
+
+        $scope.add = function (note) {
+
+            if (typeof note === 'undefined') {
+                alert('note is empty');
+                return;
+            }
+            AddRemoveNotes.add({name: note});
+        }
+
+        $scope.remove = function() {
+            AddRemoveNotes.remove();
+        }
+    }])
+</script>
+</html>
