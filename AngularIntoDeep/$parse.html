@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.js"></script>
+</head>
+<body>
+    <vik></vik>
+    <m eq="2+2"></m>
+    <m eq="2+5"></m>
+    <m eq="2*6"></m>
+    <m eq="2*30"></m>
+    <m eq="1===1"></m>
+    <script type="text/javascript">
+        angular.module('myApp', [])
+        .directive('vik', ['$parse', function($parse) {
+            return {
+                restrict: 'E',
+                link: function (scope, element, attrs) {
+                    var getter = $parse('name');
+                    var setter = getter.assign;
+                    var context = {name:'angular'};
+                    var locals = {name:'local'};
+                    scope.name = getter(context);
+                },
+                template: '{{name}}<br />'
+
+
+            }
+        }])
+        .directive('m', ['$parse', function($parse) {
+            return {
+                restrict: 'E',
+                scope: {
+                    'eq' : '@'
+                },
+                link: function(scope, element, attrs) {
+                    scope.inner = $parse(attrs.eq)()
+                },
+                template: '{{inner}}<br />'
+            }
+        }]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.js"></script>
+</head>
+<body ng-controller="main">
+
+    <script type="text/javascript">
+        angular.module('myApp', [])
+        .controller('main', ['$interpolate', '$parse', function($interpolate, $parse) {
+
+            var interp = $interpolate('Hello {{name | uppercase}}!');
+            var users = [
+                {name: 'Victor'},
+                {name: 'Sergey'},
+                {name: 'Foo'}
+               
+            ]
+
+            var getName = $parse('name');
+            var setName = getName.assign;
+
+           var neName = setName(users, 'BOBO');
+            users.push({name: setName(users, 'BOBO')});
+            delete users.name;
+            angular.forEach(users, function(name, key) {
+                
+                console.log(interp({name:getName(name)}))
+            })
+
+            //console.log(users)
+            
+        }])
+    </script>
+</body>
+</html>

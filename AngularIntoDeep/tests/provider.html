@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="notesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../bower_components/angular/angular.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+
+</div>
+
+
+<script type="text/javascript">
+
+function Foo() {
+    this.greeting = 'Buyakaka';
+}
+
+var f = new Foo();
+
+angular.module('notesApp', [])
+
+.provider('SayHelloWorld', function() {
+
+    var self  = this;
+    self.hello = "default";
+
+    self.sayHello = function(person) {
+        return self.hello + ' ' + person;
+    };
+
+    self.setHelloWorld = function(word) {
+        self.hello = word;
+    };
+
+
+    self.choseGreeting = function () {
+
+    };
+
+    return {
+        $get: function($http) {
+
+          //  console.dir($http)
+            return {
+                hello: self.sayHello,
+            }
+        },
+        setHello: self.setHelloWorld
+    }
+})
+.config(function(SayHelloWorldProvider) {
+
+   SayHelloWorldProvider.setHello('Hello');
+})
+.controller('MainCtrl', ['SayHelloWorld', function(SayHelloWorld) {
+    console.log(SayHelloWorld.hello('Victor'))
+    console.log(SayHelloWorld.hello('Sergey'))
+    //
+    console.log(SayHelloWorld)
+}]);
+</script>
+</body>
+</html>
