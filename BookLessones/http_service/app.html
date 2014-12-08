@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../bower_components/angular/angular.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+    
+    <p ng-repeat="note in notes">{{note.label}}</p>
+
+    <script type="text/javascript">
+
+    angular.module('App',[])
+      .config(['$httpProvider', function ($httpProvider) {
+            // enable http caching
+           $httpProvider.defaults.cache = true;
+      }])
+
+    .controller('MainCtrl', ['$cacheFactory', '$scope', '$http', function($cacheFactory, $scope, $http){
+  
+        $http.get('config.php').then(function(configResponse) {
+
+            return $http.get(configResponse.data.id);
+
+        }).then(function(userResponse) {
+
+            return $http.get(userResponse.data.src + '?id=' + userResponse.data.id);
+
+        }).then(function(itemResponse) {
+        $scope.notes = itemResponse.data;
+
+        var notes = $cacheFactory('notes');
+
+       
+
+        notes.put('notes', {note:  $scope.notes})
+       
+      //  console.log($cacheFactory.info())
+        //console.log($scope.notes)
+        //
+         notes.put('notes', {
+            name: 'John',
+                skills: ['programming', 'piano']})
+
+          console.log(notes.get('notes'))
+            }, function(error) {
+            console.log(error)
+        });
+    
+    }])
+
+    </script>
+</body>
+</html>
