@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+    <meta charset="UTF-8">
+    <title>GET Example</title>
+    <script src="../../bower_components/angular/angular.js"></script>
+    <style>
+        .item {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Hello Service </h1>
+    <div ng-controller="MainCtrl">
+        <h1>Name {{name}}</h1>
+        <div  ng-repeat="todo in items track by $index" class="item">
+            <div><span ng-bind="todo.label">{{todo.label}}</span></div>
+            <div>by - <span>{{todo.author}}</span></div>
+        </div> 
+
+
+        <div>
+            <form name="addForm" ng-submit="add()">
+                <input type="text" placeholder="Label" ng-model="newTodo.label" required>
+                <input type="text" placeholder="Author" ng-model="newTodo.author" required>
+                <input type="text" ng-model="name">
+                <input type="submit" value="Add" ng-disabled="addForm.$invalid">
+                <!-- <input type="text" placeholder="Label" ng-model="newTodo.label" required> -->
+            </form>
+        </div>   
+        
+    </div>
+
+
+
+    <script type="text/javascript">
+
+    angular.module('App',[])
+    .config(function($httpProvider) {
+
+          $httpProvider.defaults.transformRequest = function(data) {
+
+            var query = '', name, value;
+            if (data instanceof Object) {
+
+                for(key in data) {
+
+                    query += encodeURIComponent(key) + '=' + encodeURIComponent(data[key]) + '&';                   
+                    
+                }
+
+                return query;
+            } else {
+                return data;
+            }
+
+          };
+           
+          $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+      
+    })
+
+    .controller('MainCtrl', ['$scope', '$http', function($scope, $http){
+        
+        $scope.items = [];
+        $scope.newTodo = {};
+
+         var fetchTodos = function() {
+
+             return $http.get('server.php?v=1').then(
+
+                    function(response) {
+                        $scope.items = response.data;
+                        
+
+                    }, function(error) {
+                        console.log('Error whilw fetching notes');
+                    });
+         };
+
+        fetchTodos();
+
+        $scope.add = function() {
+          
+          return $http.post('server.php', $scope.newTodo)
+          //.then(fetchTodos)
+          /*.then(function(response) {
+            $scope.items = response.data;
+          })*/
+          .then(function(response) { 
+
+                if (response.status !== 200) {
+                    return  fetchTodos();
+                } else {
+                    return $scope.items = response.data;
+                }
+
+
+                
+          })  
+          .then(function(response) {
+            $scope.newTodo = {};
+          })
+
+        }
+    
+    }])
+
+    </script>
+</body>
+</html>

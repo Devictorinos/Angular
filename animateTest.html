@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.js"></script>
+  <style>
+    .sample-show-hide {
+  padding:10px;
+  border:1px solid black;
+  background:white;
+}
+
+.sample-show-hide {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.sample-show-hide.ng-hide {
+  opacity:0;
+}
+
+ul li {
+    width: 100px;
+    border:1px solid #000;
+}
+  </style>
+
+</head>
+<body ng-app="TestApp">
+  <div ng-init="checked=true">
+  <label>
+    <input type="checkbox" ng-model="checked" style="float:left; margin-right:10px;"> Is Visible...
+  </label>
+  <div class="check-element sample-show-hide" ng-show="checked" style="clear:both;">
+    Visible...
+  </div>
+</div>
+<div ng-controller="name">
+    <form ng-submit="submit()">
+   <input type="text" readonly ng-model="test" ng-value="{{testID}}" ng-click="show()">
+   <input type="text" ng-model="email">
+   <input type="text" ng-model="phone">
+<ul class="sample-show-hide" ng-show="ver">
+    <li ng-click="hide(5, 'bobobobo')">1</li>
+    <li ng-click="hide(7, 'שלום')">2</li>
+    <li ng-click="hide(8, 'בדיקה')">3</li>
+    
+</ul>
+<button type="submit">submit</button> 
+</form>
+
+<div ng-show="result" class="sample-show-hide">
+    <h1>results</h1>
+</div>
+</div>
+
+
+
+<script>
+    angular.module('TestApp', ['ngAnimate'])
+    .controller('name', ['$scope', function($scope){
+        $scope.ver = false;
+
+        $scope.params = {}
+        $scope.show = function() {
+            $scope.ver = true;
+        }
+
+        $scope.hide = function(id, val) {
+            $scope.test = val
+            $scope.testID = id
+            $scope.ver = false;
+        }
+
+
+        $scope.submit = function() {
+            $scope.params = {
+                phone: $scope.phone,
+                email: $scope.email,
+                test: $scope.test,
+                testID: $scope.testID
+            }
+
+            console.log($scope.params);
+            $scope.result = true;
+        }
+    }])
+
+</script>
+</body>
+</html>
