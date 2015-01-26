@@ -11,7 +11,6 @@ gulp.task('compress', function() {
 
 gulp.task('clean:foo', function(cb) {
     del([
-
         'foo/report.csv',
         'foo/**',
         '!foo/deploy.json'
