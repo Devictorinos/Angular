@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="../../bower_components/angular/angular.js"></script>
+  <script>
+    angular.module('App', [])
+    .controller('CTRL', ['$scope', function($scope) {
+      $scope.name     = "Boby";
+      $scope.color    = "#ff6600";
+      $scope.reverse  = function() {
+        $scope.name = $scope.name.split('').reverse().join('');
+      }
+     
+    }])
+    .directive('fooBar', [function() {
+      // Runs during compile
+      return {
+        scope: {
+          name: '@',
+          color: '=',
+          reverse: '&'
+        },
+        template: '<div>may name is {{name}} <input ng-model="name" /></div>' + 
+        '<div> My clolor is {{color}}</div><input ng-model="color"/><br /><br />' +
+        '<button ng-click="reverse()">reverse name from directive</button>',
+        link: function($scope, iElm, iAttrs, controller) {
+          console.log('fooBar');
+        }
+      };
+    }]);
+</script>
+</head>
+<body ng-controller="CTRL">
+  <div>my CTRL Name is {{name}}</div>
+  <div>my CTRL color is {{color}}</div>
+  <div> <button ng-click="reverse()">Click to revers</button></div>
+  <hr /> <hr />
+  <foo-bar name="{{name}}" color="color" reverse="reverse()"></foo-bar>
+</body>
+</html>

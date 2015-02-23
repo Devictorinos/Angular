@@ -1,6 +1,5 @@
-var app = angular.module('scopeExample', []);
-
-app.controller('MyController', ['$scope', function($scope) {
+angular.module('scopeExample', [])
+.controller('MyController', ['$scope', function($scope) {
 
     $scope.username = 'Victor';
 
@@ -8,9 +7,8 @@ app.controller('MyController', ['$scope', function($scope) {
         $scope.greeting = ' Hello ' + $scope.username + ' !';
     };
 
-}]);
-
-app.controller('MyController2', ['$scope', function($scope) {
+}])
+.controller('MyController2', ['$scope', function($scope) {
     
     $scope.username = 'Victor';
 
