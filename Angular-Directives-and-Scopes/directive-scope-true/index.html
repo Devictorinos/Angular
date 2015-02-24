@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App" ng-strict-di>
+<head>
+  <meta charset="UTF-8">
+  <title>Scope: true - inside Directive </title>
+  <style type="text/css">
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div ng-controller="BooksCtrl" ng-cloak>
+    <h1>this is name of the Controller scope</h1>
+    <h2>{{name}}</h2>
+    <input ng-model="name" >
+  <hr /><hr />
+    <book></book>
+  </div>
+
+  <script src="../../bower_components/angular/angular.js" type="text/javascript"></script>
+  <script>
+  angular.module('App', [])
+  .controller('BooksCtrl', ['$scope', function($scope) {
+    $scope.name = 'Victor';
+    //console.log('scope of controller ', $scope);
+  }])
+  .directive('book', [function() {
+    return {
+      scope: true,
+      template: '<div><h1> this is name of the directive book <h1><h2>{{name}}</h2><input ng-model="name">' + 
+                '<h1> THIS IS last name of directive book</h1><h2>{{lastName}}</h2>',
+      controller: ['$scope', '$element', '$attrs', '$transclude',  function($scope, $element, $attrs, $transclude) {
+        $scope.lastName = "Lubchuk";    
+      }],
+      link: function($scope, element, attrs) {
+       // console.log('scope from directive ',  $scope);
+       // console.log('scope of controller from directive ',  $scope.name);
+      }
+    };
+  }]);
+
+ /* directive('', ['', function(){
+    // Runs during compile
+    return {
+      // name: '',
+      // priority: 1,
+      // terminal: true,
+      // scope: {}, // {} = isolate, true = child, false/undefined = no change
+      // controller: function($scope, $element, $attrs, $transclude) {},
+      // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
+      // restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
+      // template: '',
+      // templateUrl: '',
+      // replace: true,
+      // transclude: true,
+      // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
+      link: function($scope, iElm, iAttrs, controller) {
+        
+      }
+    };
+  }]);*/
+</script>
+</body>
+</html>

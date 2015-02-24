@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App" ng-strict-di >
+<head>
+  <meta charset="UTF-8">
+  <title>Transclude in Angular Directives</title>
+    <style type="text/css">
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+      display: none !important;
+    }
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+<body ng-cloak>
+  
+  My Form going Here
+  <form action="" wrap-in="red">
+
+    <div><label for="">Email: <input type="text" placeholder="Enter Your Email "></label></div>
+    <div><label for="">Password: <input type="password" placeholder="Enter Your Password "></label></div>
+  </form>
+
+  <script src="../../bower_components/angular/angular.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  angular.module('App', [])
+  .directive('wrapIn', ['$templateCache', function($templateCache) {
+    return {
+      transclude: 'element',
+      link: function($scope, element, attrs, controller, transclude) {
+
+        var template        = $templateCache.get(attrs.wrapIn);
+        var templateElement = angular.element(template);
+        
+        transclude($scope, function(clone) {
+
+          element.after(templateElement.append(clone))
+
+        });
+      }
+    };
+  }]);
+
+</script>
+<script type="text/ng-template" id="red">
+  <div class="red"></div>
+</script>
+</body>
+</html>
