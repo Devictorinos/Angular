@@ -2,20 +2,14 @@ var gulp = require('gulp');
 var del  = require('del');
 var uglify = require('gulp-uglify');
 
-gulp.task('compress', function() {
+gulp.task('uglify:js', function() {
 
     gulp.src('gulpTests/js/*.js')
-    .pipe(uglify())
+    .pipe(uglify({mangle:{topLevel: true}}))
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('clean:foo', function(cb) {
-    del([
-        'foo/report.csv',
-        'foo/**',
-        '!foo/deploy.json'
-    ], cb);
+gulp.task('deault', function() {
+  gulp.watch('gulpTests/js/*.js', ['uglify:js']);
 });
-
-gulp.task('cleanFolders', ['clean:foo']);
 

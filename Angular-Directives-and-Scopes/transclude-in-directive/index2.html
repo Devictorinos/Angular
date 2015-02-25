@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App" ng-strict-di >
+<head>
+  <meta charset="UTF-8">
+  <title>Transclude in Angular Directives</title>
+    <style type="text/css">
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+      display: none !important;
+    }
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+<body ng-cloak>
+    <div ng-controller="CTRL">
+    
+    <foo-bar>Hey {{name}} what u thinking about Angular?</foo-bar>
+    <hr /><hr />
+      
+    </div>
+  <script src="../../bower_components/angular/angular.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  angular.module('App', [])
+  .controller('CTRL', ['$scope', function($scope) {
+    $scope.name = "Victor";
+  }])
+  .directive('fooBar', function() {
+    return {
+      restrict: 'E',
+      transclude: true,
+      template: 'This is my Template ',
+      link: function($scope, element, attrs, ctrl, transclude) {
+        transclude($scope, function(clone, $scope) {
+          console.log(clone)
+
+          element.append(clone);
+        });
+
+      }
+    };
+  })
+</script>
+</body>
+</html>
