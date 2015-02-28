@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <web-bek></web-bek>
+  <script src="../../bower_components/angular/angular.js"></script>
+  <script>
+  angular.module('App', [])
+  .directive('webBek', [function() {
+    // Runs during compile
+    return {
+
+      restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
+       controller: function($scope, $element, $attrs, $transclude) {
+          $scope.name = "Yosik";
+       },
+       scope: true, // {} = isolate, true = child, false/undefined = no change
+       templateUrl: 'video.html',
+
+      link: function($scope, iElm, iAttrs, controller) {
+        console.log($scope)
+      }
+    };
+  }]);
+</script>
+</body>
+</html>

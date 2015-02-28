@@ -32,7 +32,7 @@
         var template        = $templateCache.get(attrs.wrapIn);
         var templateElement = angular.element(template);
         
-        transclude($scope, function(clone) {
+        transclude($scope, function(clone, $scope) {
 
           element.after(templateElement.append(clone))
 
