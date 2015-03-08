@@ -1,0 +1,662 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bow",
+				"bower_components/"
+			],
+			[
+				"json",
+				"jQuery.parseJSON	jQuery.parseJSON"
+			],
+			[
+				"menu",
+				"menuItems"
+			],
+			[
+				"phrase",
+				"phrases"
+			],
+			[
+				"r",
+				"re	require"
+			],
+			[
+				"cl",
+				"clone	.clone()"
+			],
+			[
+				"inde",
+				"index.js"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"clone",
+				"cloneLinkingFn"
+			],
+			[
+				"direciv",
+				"verbose_directive	AngularJS"
+			],
+			[
+				"$root",
+				"$rootScope	AngularJS"
+			],
+			[
+				"directive",
+				"verbose_directive	AngularJS"
+			],
+			[
+				"facto",
+				"factory	AngularJS"
+			],
+			[
+				"dire",
+				"directive"
+			],
+			[
+				"directiv",
+				"verbose_directive	AngularJS"
+			],
+			[
+				"modu",
+				"mousedown	.mousedown()"
+			],
+			[
+				"module",
+				"verbose_module	AngularJS"
+			],
+			[
+				"directi",
+				"verbose_directive	AngularJS"
+			],
+			[
+				"ex",
+				"expect"
+			],
+			[
+				"_$",
+				"_$rootScope_"
+			],
+			[
+				"before",
+				"beforeEach"
+			],
+			[
+				"befo",
+				"beforeEach"
+			],
+			[
+				"$interpolate",
+				"$interpolateProvider	AngularJS"
+			],
+			[
+				"ob_get",
+				"ob_get_contents"
+			],
+			[
+				"ini_",
+				"ini_set"
+			],
+			[
+				"header",
+				"headerData"
+			],
+			[
+				"head",
+				"headerData"
+			],
+			[
+				"hea",
+				"HeaderData"
+			],
+			[
+				"if",
+				"if	@if @else"
+			],
+			[
+				"include",
+				"include	@include"
+			],
+			[
+				"vil",
+				"Validator"
+			],
+			[
+				"fa",
+				"factory	AngularJS"
+			],
+			[
+				"watch",
+				"watch"
+			],
+			[
+				"im",
+				"import	@import"
+			],
+			[
+				"remo",
+				"removeCode"
+			],
+			[
+				"angular-u",
+				"angular-ui-bootstrap/"
+			],
+			[
+				"angu",
+				"angular-ui/"
+			],
+			[
+				"pro",
+				"proJs"
+			],
+			[
+				"scr",
+				"src	Attr"
+			],
+			[
+				"c",
+				"[pub] ○ controller (name: string, controllerConstructor: Function): ng.IModule (+ 2 overload(s))"
+			],
+			[
+				"ang",
+				"angts"
+			],
+			[
+				"css",
+				"cssFiles"
+			],
+			[
+				"src",
+				"srcDir"
+			],
+			[
+				"v",
+				"variables.js"
+			],
+			[
+				"file",
+				"filesSrc"
+			],
+			[
+				"j",
+				"jquery/"
+			],
+			[
+				"b",
+				"[pub] ○ mousedown (): JQuery (+ 2 overload(s))"
+			],
+			[
+				"jquery",
+				"jquery/"
+			],
+			[
+				"jq",
+				"jquery/"
+			]
+		]
+	},
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 327.0,
+		"selected_items":
+		[
+			[
+				"save",
+				"Project: Save As"
+			],
+			[
+				"ssjson",
+				"Set Syntax: JSON"
+			],
+			[
+				"ssjso",
+				"Set Syntax: JSON"
+			],
+			[
+				"err",
+				"Typescript: Errors view"
+			],
+			[
+				"error",
+				"Typescript: Errors view"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"project",
+				"Project: Add Folder"
+			],
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"re",
+				"Snippet: require"
+			],
+			[
+				"req",
+				"Snippet: require"
+			],
+			[
+				"http",
+				"Snippet: Snippet: HTTPS Get"
+			],
+			[
+				"set syntax js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"istall",
+				"Package Control: Install Package"
+			],
+			[
+				"ssphp",
+				"Set Syntax: PHP"
+			],
+			[
+				"gitig",
+				"Gitignore: New gitignore"
+			],
+			[
+				"erro",
+				"Typescript: Errors view"
+			],
+			[
+				"type",
+				"Typescript: Errors view"
+			],
+			[
+				"types",
+				"Typescript: Build"
+			],
+			[
+				"ssts",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"sssh",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"typescrip",
+				"Typescript: Errors view"
+			],
+			[
+				"sscss",
+				"Set Syntax: SCSS"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 924.0,
+		"history":
+		[
+			"dir",
+			"cd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/Angular/Angular-Directives-and-Scopes/directive-scope-true/index.html",
+		"/var/www/Angular/.tags",
+		"/var/www/Angular/Learning-Angular.sublime-project",
+		"/var/www/Angular/READM.md",
+		"/var/www/Locksmith-Project/project/index.html",
+		"/var/www/Locksmith-Project/src/js/app.js",
+		"/var/www/Locksmith-Project/src/js/controllers.js",
+		"/var/www/Locksmith-Project/src/js/scripts.js",
+		"/var/www/Locksmith-Project/src/sass/style.scss",
+		"/var/www/Locksmith-Project/src/sass/help-classes.scss",
+		"/var/www/Locksmith-Project/project/lib/ajax/getSiteHeaderData.php",
+		"/home/victorino/.config/sublime-text-3/Packages/AutoFileName/autofilename.sublime-settings",
+		"/home/victorino/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/var/www/Locksmith-Project/locksmith.sublime-project",
+		"/var/www/Locksmith-Project/project/lib/classes/db/Dbw.Class.php",
+		"/var/www/Locksmith-Project/.tags",
+		"/var/www/Locksmith-Project/test.html",
+		"/var/www/Webekroom/.tags",
+		"/var/www/Webekroom/.tags_sorted_by_file",
+		"/var/www/Locksmith-Project/project/templates/app-header.html",
+		"/var/www/Locksmith-Project/gulpfile.js",
+		"/var/www/Locksmith-Project/src/js/filters.js",
+		"/var/www/Locksmith-Project/tests-with-Eli/directive-test.html",
+		"/var/www/Locksmith-Project/src/js/appHeader.js",
+		"/var/www/Locksmith-Project/src/js/services.js",
+		"/var/www/Locksmith-Project/npm-debug.log",
+		"/var/www/Locksmith-Project/node_modules/karma/node_modules/optimist/example/line_count_options.js",
+		"/var/www/Locksmith-Project/untitled.sublime-project",
+		"/var/www/NodeJS/start/db/index.js",
+		"/var/www/NodeJS/start/logger.js",
+		"/var/www/NodeJS/start/user/index.js",
+		"/var/www/NodeJS/start/db/ru.json",
+		"/var/www/NodeJS/start/server.js",
+		"/var/www/NodeJS/start/app.js",
+		"/var/www/NodeJS/.jscs.json",
+		"/var/www/NodeJS/start/user/ru.json",
+		"/home/victorino/.config/sublime-text-3/Packages/NodeRequirer/Require.sublime-settings",
+		"/home/victorino/.config/sublime-text-3/Packages/User/Require..sublime-keymap",
+		"/home/victorino/.config/sublime-text-3/Packages/Nodejs/Nodejs.sublime-settings",
+		"/var/www/webrtc/package.json",
+		"/var/www/webrtc/index.js",
+		"/var/www/Angular/learning-compile/index.html",
+		"/var/www/Angular/learning-compile/app.js",
+		"/var/www/Angular/AngularScopes/simple-scope-example/index.html",
+		"/var/www/Angular/AngularScopes/app.js",
+		"/var/www/Angular/AngularScopes/index.html",
+		"/var/www/Angular/bower_components/angular/angular.js",
+		"/var/www/Angular/package.json",
+		"/var/www/Angular/.jscs.json",
+		"/var/www/Locksmith-Project/.jscs.json",
+		"/var/www/Locksmith-Project/project/app/app.js",
+		"/var/www/Locksmith-Project/my.conf.js",
+		"/var/www/Locksmith-Project/project/test.php",
+		"/var/www/Locksmith-Project/project/lib/classes/db/Debug.Class.php",
+		"/home/victorino/.config/sublime-text-3/Packages/User/nice-print_r.sublime-snippet",
+		"/var/www/Locksmith-Project/project/lib/classes/db/Dbw.git",
+		"/var/www/Locksmith-Project/project/lib/classes/db/Dbw/autoloader.php",
+		"/var/www/Locksmith-Project/project/lib/autoloader.php",
+		"/var/www/Locksmith-Project/project/lib/classes/project/main/Locksmith.Class.php",
+		"/var/www/Locksmith-Project/project/lib/classes/project/sms/Sms.Class.php",
+		"/var/www/Locksmith-Project/project/lib/classes/project/mail/Mail.Class.php",
+		"/var/www/Locksmith-Project/src/sass/mixings.scss",
+		"/var/www/Locksmith-Project/project/css/style.css",
+		"/var/www/Locksmith-Project/src/sass/vars.scss",
+		"/var/www/Locksmith-Project/src/sass/funcs.scss",
+		"/etc/php5/apache2/php.ini",
+		"/var/www/Locksmith-Project/src/ts/app.js",
+		"/var/www/Locksmith-Project/src/ts/.sublimets",
+		"/var/www/Locksmith-Project/src/ts/scripts.ts",
+		"/var/www/Locksmith-Project/src/ts/app.ts",
+		"/var/www/Locksmith-Project/src/app.js",
+		"/var/www/Locksmith-Project/src/sass/fdsfsd.html",
+		"/var/www/new-project/project/app.js/app.js",
+		"/var/www/new-project/src/ts/controllers.ts",
+		"/var/www/new-project/src/ts/services.ts",
+		"/var/www/new-project/src/ts/.sublimets",
+		"/var/www/new-project/gulpfile.js",
+		"/var/www/new-project/project/app/app.js",
+		"/var/www/new-project/project/app/scripts.js",
+		"/var/www/new-project/project/lib/autoloader.php",
+		"/var/www/new-project/project/index.html",
+		"/var/www/new-project/project/js/scripts.js",
+		"/var/www/new-project/project/js/controllers.js",
+		"/var/www/new-project/project/js/filters.js",
+		"/var/www/new-project/project/js/modules.js",
+		"/var/www/new-project/project/js/services.js",
+		"/var/www/new-project/src/ts/scripts.ts",
+		"/var/www/new-project/src/ts/filters.ts",
+		"/var/www/new-project/src/ts/modules.ts",
+		"/var/www/new-project/.jscs.json",
+		"/var/www/new-project/src/ts/app.js",
+		"/var/www/new-project/src/ts/directives.ts",
+		"/var/www/new-project/src/sass/style.scss",
+		"/var/www/new-project/bower_components/DefinitelyTyped/CONTRIBUTING.md",
+		"/var/www/new-project/node_modules/gulp-autoprefixer/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/css-opacity.json",
+		"/var/www/new-project/bower_components/bootstrap-sass-twbs/composer.json",
+		"/var/www/new-project/node_modules/gulp-concat-css/node_modules/rework/node_modules/css/lib/stringify/compiler.js",
+		"/var/www/new-project/bower.json",
+		"/var/www/new-project/project/css/normalize.css",
+		"/var/www/new-project/dest/css/style.css",
+		"/var/www/new-project/dest/css/style.css.map",
+		"/var/www/new-project/project/index.php",
+		"/var/www/new-project/project/css/style.css",
+		"/var/www/new-project/project/css/style.css.map",
+		"/var/www/new-project/dest/test.html",
+		"/var/www/new-project/configFiles/gulpTasks.js",
+		"/var/www/new-project/gul-run-file.js",
+		"/var/www/new-project/configFiles/variables.js",
+		"/var/www/new-project/configFiles.js",
+		"/var/www/new-project/test.js",
+		"/var/www/new-project/dest/css/vvvv.css",
+		"/var/www/new-project/dest/css/main.css",
+		"/var/www/new-project/package.json",
+		"/var/www/new-project/dest/css/main.css.map",
+		"/var/www/new-project/src/ts/js/scripts.ts",
+		"/var/www/new-project/src/ts/angular/angular.ts",
+		"/var/www/new-project/bower_components/bootstrap-sass-twbs/assets/stylesheets/_bootstrap-compass.scss",
+		"/var/www/new-project/bower_components/angular-strap/gulpfile.js",
+		"/var/www/new-project/bower_components/angular-strap/.bower.json",
+		"/var/www/new-project/bower_components/bootstrap/.bower.json",
+		"/var/www/new-project/src/ts/js/.sublimets",
+		"/var/www/new-project/src/ts/angular/.sublimets",
+		"/home/victorino/.config/sublime-text-3/Packages/ArcticTypescript/examples/sublimets/.sublimets",
+		"/var/www/new-project/.sublimets",
+		"/var/www/new-project/npm-debug.log",
+		"/var/www/typescript/bower_components/DefinitelyTyped/jquery/jquery.d.ts",
+		"/var/www/typescript/test.js",
+		"/var/www/typescript/gulpfile.js"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/var/www/new-project/"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"node_modules",
+			"json",
+			"$httpProvider",
+			"menuData",
+			"menuItems",
+			"headerData",
+			"victor",
+			"script",
+			"Victor",
+			"greeting",
+			"{\n",
+			"callback",
+			", ",
+			"}\n",
+			"Ofetch",
+			"head",
+			";",
+			"=",
+			" head.",
+			"bookmarks2",
+			"first",
+			"true",
+			"Person.",
+			"true",
+			"connect",
+			"phrase",
+			"name",
+			"true",
+			"module",
+			"Victorino",
+			"scroll",
+			",\n",
+			"compress",
+			"\">",
+			"CTRL",
+			"div",
+			"Miller",
+			"'",
+			"element",
+			"$scope",
+			"Second",
+			"test",
+			"text-success",
+			"'",
+			"newvalue",
+			"bordered",
+			"json",
+			"RootApp",
+			"rootApp",
+			"\"",
+			"Debug",
+			"this",
+			"subject",
+			"replace",
+			"right",
+			"left",
+			"something",
+			"true",
+			"xsrf",
+			"response",
+			"deferreds",
+			"app",
+			"myModule",
+			"dest",
+			"header",
+			"sx",
+			"\"",
+			" ",
+			"task",
+			"gulp",
+			"link-color",
+			"$bootstrap-sass-asset-helper",
+			"www/html"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 146.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.typescript_output":
+	{
+		"height": 124.0
+	},
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"lock",
+				"locksmith.sublime-project"
+			],
+			[
+				"",
+				"start/db/ru.json"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/var/www/Webekroom/webekroom.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 253.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

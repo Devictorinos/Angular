@@ -1,0 +1,23 @@
+{
+  "name": "Angular",
+  "version": "latest",
+  "homepage": "https://github.com/V1ktorino/Angular",
+  "authors": [
+    "V1ktorino <viktorlubchuk@gmail.com>"
+  ],
+  "description": "Learning AngularJS",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.3.14",
+    "bootstrap": "~3.3.2",
+    "jquery": "~2.1.3",
+    "angular-route": "~1.3.14"
+  }
+}

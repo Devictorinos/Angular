@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App" ng-strict-di>
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Route example</title>
+  <script type="text/javascript" src="../../bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="../../bower_components/angular-route/angular-route.js"></script>
+  
+</head>
+<body>
+  <h2>AngularJS Routing Application</h2>
+  <ul>
+    <li><a href="#/">Default Routing</a></li>
+    <li><a href="#/second">To Second Page</a></li>
+    <li><a href="#/fdsdfds">Not Existing Page</a></li>
+  </ul>
+  <div ng-view></div>
+  <script>
+  angular.module('App', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+      .when('/', {
+        template: "<h1>This is default template</h1>"
+      })
+      .when('/second', {
+        template: "<h1>This Is Second Page</h1>"
+      })
+      .otherwise({redirectTo: '/'});
+  }])
+</script>
+</body>
+</html>
